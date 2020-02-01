@@ -82,6 +82,11 @@ html {
     padding-top: 65px;
 }
 
+.content .msg {
+    padding-left: 20px;
+    color: hsl(0, 36%, 70%);
+}
+
 h1 {
     font-size: 64px;
     color: hsl(0, 6%, 24%);
@@ -131,6 +136,26 @@ form {
     padding-right: 74px;
 }
 
+.error-img {
+    position: absolute;
+    right: 155px;
+    top: 13px;
+    display: none;
+}
+
+.invalid {
+    padding-right: 104px !important;
+    border: 1px solid hsl(0, 93%, 68%) !important;
+}
+
+.msg-invalid {
+    color: hsl(0, 93%, 68%) !important;
+}
+
+.active {
+    display: block;
+}
+
 #email::placeholder {
     color: #d8ccce;
 }
@@ -148,13 +173,18 @@ form {
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     float: right;
     position: relative;
-    top: -54px;
+    top: -53px;
+    right: 44px;
     box-shadow: -1px 5px 16px rgba(206, 151, 151, 0.78);
     transition: transform .5s;
 }
 
+.button:hover {
+    background: linear-gradient(135deg, #fdeded 0%, #f4b8b8 100%);
+}
+
 .button img {
-    padding: 18.5px 0;    
+    padding: 9.5px 0;    
 }
 
 .button:hover {
@@ -221,6 +251,26 @@ footer {
         height: 800px;
         width: initial;
     }
+
+    #email {
+        margin-left: -14px;
+    }
+
+    .error-img {
+        right: 132px;
+    }
+
+    .button {
+        right: 21px;
+    }
+
+    .contant-msg {
+        padding-left: 73px;
+    }
+
+    .invalid {
+        padding-right: 116px !important;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -228,14 +278,14 @@ footer {
 
     .image {
         background-image: url("../images/hero-mobile.jpg");
-        width: 100vw;
+        width: 100%;
         height: 332px;
     }
 
     /* Main */  
 
     .main {
-        height: 506px;
+        height: 584px;
     }
 
     .content {
@@ -253,21 +303,30 @@ footer {
     #email {
         width: 269px;
         height: 47px;
-        padding-right: 48px;
+        padding-right: 72px;
         box-sizing: border-box;
         margin-left: 41px;
+        padding-left: 21px;
+    }
+
+    .error-img {
+        display: none;
+    }
+
+    .invalid {
+        padding-right: 72px !important;
     }
 
     .button {
         top: -2px;
-        right: 64px;
+        right: 82px;
         width: 65px;
         height: 52px;
         border-radius: 24px;
     }
 
     .button img {
-        padding: 15.5px 0;
+        padding: 8.5px 0;
     }
 
 }
@@ -280,7 +339,7 @@ footer {
     /* Main */
 
     .main {
-        height: 489px;
+        height: 504px;
     }
 
     .main p {
@@ -289,19 +348,46 @@ footer {
     }
 
     #email {
-        margin-left: 0;
+        margin-left: -34px;
         padding-left: 23px;
+        padding-right: 56px !important;
     }
 
     .button {
         top: -2px;
-        right: 23px;
+        right: 60px;
         position: absolute;
+    }
+
+    .attribution {
+        height: 41px;
+    }
+}
+
+@media only screen and (max-width:390px) {
+    #email {
+        margin-left: -32px;
+    }
+
+    .button {
+        right: 51px;
     }
 }
 
 @media only screen and (max-width:360px) {
     #email {
-        padding-right: 76px;
+        padding-right: 39px;
+        width: 228px;
+    }
+}
+
+@media only screen and (max-width:341px) {
+    #email {
+        width: 200px;
+        padding-right: 52px;
+    }
+
+    .button {
+        right: 59px;
     }
 }
